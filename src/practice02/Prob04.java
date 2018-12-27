@@ -10,11 +10,21 @@ public class Prob04 {
 		printCharArray( c2 );
 	}
 	
+	//문자열 뒤집는 메소드
 	public static char[] reverse(String str) {
-		/* 코드를 완성합니다 */
+		char[] ch = new char[str.length()];
+		
+		for(int n = 0; n < str.length(); n++) {
+			ch[n] = str.charAt(str.length()-n-1);
+		}
+		
+		return ch;
 	}
-
+	//뒤집어진 char형 배열 출력하는 메소드
 	public static void printCharArray(char[] array){
-		/* 코드를 완성합니다 */
+		for(int n = 0; n < array.length; n++) {
+			System.out.print(array[n]);
+		}
+		System.out.println();
 	}
 }
